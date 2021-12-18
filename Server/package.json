@@ -1,0 +1,26 @@
+{
+    "name": "shanto",
+    "version": "1.0.0",
+    "description": "Simple CRUD app",
+    "main": "index.js",
+    "scripts": {
+        "start": "nodemon index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Hasibul-Islam-Shanto/CRUD.git"
+    },
+    "author": "Md Hasibul Islam Shanto",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Hasibul-Islam-Shanto/CRUD/issues"
+    },
+    "homepage": "https://github.com/Hasibul-Islam-Shanto/CRUD#readme",
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "cors": "^2.8.5",
+        "express": "^4.17.1",
+        "mongoose": "^6.1.1",
+        "nodemon": "^2.0.15"
+    }
+}

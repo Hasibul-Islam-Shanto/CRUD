@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #3E065F;
+    font-family: "Bree Serif";
+    padding: .5rem 0rem;
+}
+
+.navbar .nav_text {
+    text-decoration: none;
+    outline: none;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.navbar .logo {
+    position: absolute;
+    left: 3%;
+}
+
+.navbar .logo .nav_text {
+    font-size: 1.5rem;
+}
+
+.navbar .nav_link .nav_text {
+    margin-left: 2rem;
+    font-family: "Bree Serif";
+}
+
+.navbar .nav_link .nav_text:hover {
+    border-bottom: 1px solid #fff;
+    padding-bottom: 5px;
+}

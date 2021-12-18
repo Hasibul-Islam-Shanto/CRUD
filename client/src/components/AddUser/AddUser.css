@@ -1,0 +1,45 @@
+.addUser {
+    height: auto;
+    max-width: 500px;
+    width: 100%;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.addUser input {
+    width: 100%;
+    padding: .8rem 1rem;
+    margin-top: 1rem;
+    font-size: 1rem;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    border-bottom: 1.5px solid gray;
+    font-family: "Bree Serif";
+    letter-spacing: 1.5px;
+}
+
+.addUser input:focus {
+    transform: scale(1.05);
+}
+
+.addUser .btn {
+    font-size: 1rem;
+    font-family: "Bree Serif";
+    font-weight: 500;
+    color: #fff;
+    background-color: #3E065F;
+    border: none;
+    outline: none;
+    padding: .4rem;
+    margin-top: 1.5rem;
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+}

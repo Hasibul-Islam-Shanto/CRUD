@@ -1,0 +1,38 @@
+.home {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home .titleDiv h1:hover {
+    transform: scale(1.08);
+    letter-spacing: 10px;
+    transition: 0.5s;
+}
+
+.home .titleDiv {
+    letter-spacing: 5px;
+    color: #3e065f;
+    cursor: pointer;
+    position: absolute;
+    top: 25%;
+}
+
+.home .animDiv {
+    position: absolute;
+    top: 30%;
+    color: #3e065f;
+}
+
+.home span {
+    color: #009dae;
+}
+
+
+/* .homeImg h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
