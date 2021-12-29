@@ -12,11 +12,11 @@ app.use(cors());
 
 
 //Database connection .......
-mongoose.connect("mongodb://localhost:27017/CRUD", {
+mongoose.connect("mongodb+srv://shanto245:shanto246@crud.3elxw.mongodb.net/CRUD?retryWrites=true&w=majority", {
         useNewUrlParser: true,
         useUnifiedTopology: true
     }).then(() => console.log("DataBase is Connected Successfully....."))
-    .catch((err) => console.log("DataBase is connnected...."))
+    .catch((err) => console.log("DataBase is not connnected...."))
 const InfoRoute = require('./routes/InfoRoute')
 app.use('/', InfoRoute);
 
