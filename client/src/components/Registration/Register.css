@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
+.reg_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reg_wrapper {
+    max-width: 400px;
+    height: auto;
+    background: #fff;
+    padding: 10px 35px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.reg_wrapper .form .input_field {
+    position: relative;
+    margin-bottom: 20px;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.reg_wrapper .form .input_field .input {
+    max-width: 80%;
+    padding: 10px 35px;
+    border: none;
+    background: #eeeeee;
+    border-radius: 20px;
+    font-size: 15px;
+}
+
+.reg_wrapper .form .btn {
+    max-width: 70%;
+    margin: 20px auto 0;
+    background: #3e065f;
+    text-align: center;
+    padding: 7px;
+    border-radius: 25px;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.reg_wrapper .form .btn a {
+    color: #fff;
+}
+
+.reg_wrapper .form .input_field i {
+    position: absolute;
+    top: 9px;
+    left: 15px;
+    font-size: 13px;
+    color: #1d2120;
+    opacity: 0.8;
+}
+
+::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #1d2120;
+    opacity: 0.8;
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #1d2120;
+}

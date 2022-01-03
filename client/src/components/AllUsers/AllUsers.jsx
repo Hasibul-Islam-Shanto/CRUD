@@ -20,7 +20,23 @@ const AllUsers = () => {
   const EditUser = (id) => {
     navigate(`/edit/${id}`);
   };
+
+  
+  const authenticate = async() =>{
+    try {
+      const res = await axios.get("http://localhost:8000/user/auth", { withCredentials: true });
+      if (res.status !== 200) {
+        const error = new Error(res.error);
+        throw error;
+      }
+    } catch (error) {
+      console.log(error);
+      navigate("/");
+    }
+  }
+
   useEffect(() => {
+    authenticate()
     getAllusers();
   }, []);
   return (

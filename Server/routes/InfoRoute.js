@@ -23,7 +23,7 @@ route.post('/add', async(req, res) => {
         }
 
     })
-    // Delet the user....
+    // Delete the user....
 route.delete('/:id', async(req, res) => {
         try {
             await User.deleteOne({ _id: req.params.id });

@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./AddUser.css";
 const AddUser = () => {
@@ -17,10 +17,10 @@ const AddUser = () => {
   };
 
   //Sending value in Database and save there....
-  const Event = () => {
+  const Event = async() => {
     const { name, username, email, phone } = user;
     if (name && username && email && phone) {
-      axios.post("http://localhost:8000/add", user).then((res) => {
+     await axios.post("http://localhost:8000/add", user).then((res) => {
         navigate("/allusers");
         alert("Data Saved.");
       });
@@ -28,6 +28,21 @@ const AddUser = () => {
       alert("Invalid Input.");
     }
   };
+  const authenticate = async() =>{
+    try {
+      const res = await axios.get("http://localhost:8000/user/auth", { withCredentials: true });
+      if (res.status !== 200) {
+        const error = new Error(res.error);
+        throw error;
+      }
+    } catch (error) {
+      console.log(error);
+      navigate("/");
+    }
+  }
+   useEffect(() => {
+    authenticate()
+   }, [])
   return (
     <>
       <div className="addUser">

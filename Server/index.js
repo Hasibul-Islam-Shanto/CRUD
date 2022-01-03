@@ -4,21 +4,31 @@ const mongoose = require('mongoose')
 const app = express()
 const cors = require('cors')
 const bodyParser = require('body-parser')
+const dotenv = require('dotenv')
+const cookieParser = require("cookie-parser");
 
 //Internals imports
+app.use(cookieParser());
 app.use(bodyParser.json({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(cors());
-
+app.use(cors({
+    origin : true,
+    credentials: true,
+}
+));
+require('dotenv').config()
 
 //Database connection .......
-mongoose.connect("mongodb+srv://shanto245:shanto246@crud.3elxw.mongodb.net/CRUD?retryWrites=true&w=majority", {
+mongoose.connect(process.env.DATABASE_URL , {
         useNewUrlParser: true,
         useUnifiedTopology: true
     }).then(() => console.log("DataBase is Connected Successfully....."))
     .catch((err) => console.log("DataBase is not connnected...."))
+
 const InfoRoute = require('./routes/InfoRoute')
+const useRoute = require('./routes/UserRoutes')
 app.use('/', InfoRoute);
+app.use('/user',useRoute)
 
 
 
